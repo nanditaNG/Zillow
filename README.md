@@ -1,4 +1,4 @@
-**Zillow Data Analytics Project | End-To-End Python ETL Pipeline **
+Zillow Data Analytics Project | End-To-End Python ETL Pipeline 
 
 **Overview**
 
