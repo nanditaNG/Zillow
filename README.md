@@ -1,6 +1,6 @@
-Zillow Data Analytics Project | End-To-End Python ETL Pipeline 
+**Zillow Data Analytics Project | End-To-End Python ETL Pipeline **
 
-Overview
+**Overview**
 
 In this project, I focused on building and automating a Python ETL process. 
 The process involves extracting real estate properties data from the Zillow Rapid API and loading it into an Amazon S3 bucket. 
@@ -9,18 +9,29 @@ Apache Airflow employs an S3KeySensor operator to monitor the S3 bucket for the 
 
 Once the data is loaded into AWS Redshift, I connected Amazon QuickSight to the Redshift cluster to visualize the Zillow data obtained from the Rapid API.
 
-Key Technologies
+**Key Technologies**
+
 Apache Airflow: An open-source platform used for orchestrating and scheduling workflows and data pipelines.
+
 Amazon S3: For storage of raw and processed data.
+
 AWS Lambda: To process and transform the data.
+
 Amazon Redshift: For data warehousing.
+
 Amazon QuickSight: For data visualization.
 
-Project Steps
+
+**Project Steps:**
+
 Install Apache Airflow: Learn to set up Apache Airflow from scratch.
+
 Schedule the ETL Pipeline: Automate the extraction, transformation, and loading process.
+
 Utilize S3KeySensor: Monitor S3 buckets for the presence of transformed data.
+
 Set Up AWS Lambda Functions: From scratch, to handle data transformation.
+
 Configure Amazon Redshift: Set up the Redshift cluster for data storage.
 Visualize Data with QuickSight: Connect QuickSight to Redshift for data visualization.
 
