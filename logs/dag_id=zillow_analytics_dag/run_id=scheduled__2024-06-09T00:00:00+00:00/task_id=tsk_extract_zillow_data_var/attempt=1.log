@@ -1,0 +1,17 @@
+[2024-06-10T01:49:51.999+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-10T01:49:52.016+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: zillow_analytics_dag.tsk_extract_zillow_data_var scheduled__2024-06-09T00:00:00+00:00 [queued]>
+[2024-06-10T01:49:52.022+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: zillow_analytics_dag.tsk_extract_zillow_data_var scheduled__2024-06-09T00:00:00+00:00 [queued]>
+[2024-06-10T01:49:52.022+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2024-06-10T01:49:52.037+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): tsk_extract_zillow_data_var> on 2024-06-09 00:00:00+00:00
+[2024-06-10T01:49:52.040+0000] {standard_task_runner.py:63} INFO - Started process 78811 to run task
+[2024-06-10T01:49:52.044+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'zillow_analytics_dag', 'tsk_extract_zillow_data_var', 'scheduled__2024-06-09T00:00:00+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/zillowanalytics.py', '--cfg-path', '/tmp/tmpeykfa145']
+[2024-06-10T01:49:52.045+0000] {standard_task_runner.py:91} INFO - Job 50: Subtask tsk_extract_zillow_data_var
+[2024-06-10T01:49:52.084+0000] {task_command.py:426} INFO - Running <TaskInstance: zillow_analytics_dag.tsk_extract_zillow_data_var scheduled__2024-06-09T00:00:00+00:00 [running]> on host ip-172-31-25-20.us-east-2.compute.internal
+[2024-06-10T01:49:52.153+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='myemail@domain.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='zillow_analytics_dag' AIRFLOW_CTX_TASK_ID='tsk_extract_zillow_data_var' AIRFLOW_CTX_EXECUTION_DATE='2024-06-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-09T00:00:00+00:00'
+[2024-06-10T01:49:52.153+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-10T01:49:52.822+0000] {python.py:237} INFO - Done. Returned value was: ['/home/ubuntu/response_data_10062024014951.json', 'reponse_data_10062024014951.csv']
+[2024-06-10T01:49:52.823+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-10T01:49:52.842+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=zillow_analytics_dag, task_id=tsk_extract_zillow_data_var, run_id=scheduled__2024-06-09T00:00:00+00:00, execution_date=20240609T000000, start_date=20240610T014952, end_date=20240610T014952
+[2024-06-10T01:49:52.862+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-10T01:49:52.882+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-10T01:49:52.889+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,64 @@
+[2024-06-14T01:12:04.567+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-14T01:12:04.577+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: zillow_analytics_dag.tsk_is_file_in_s3_available manual__2024-06-14T01:11:55.265028+00:00 [queued]>
+[2024-06-14T01:12:04.584+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: zillow_analytics_dag.tsk_is_file_in_s3_available manual__2024-06-14T01:11:55.265028+00:00 [queued]>
+[2024-06-14T01:12:04.584+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2024-06-14T01:12:04.599+0000] {taskinstance.py:2330} INFO - Executing <Task(S3KeySensor): tsk_is_file_in_s3_available> on 2024-06-14 01:11:55.265028+00:00
+[2024-06-14T01:12:04.605+0000] {standard_task_runner.py:63} INFO - Started process 151386 to run task
+[2024-06-14T01:12:04.607+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'zillow_analytics_dag', 'tsk_is_file_in_s3_available', 'manual__2024-06-14T01:11:55.265028+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/zillowanalytics.py', '--cfg-path', '/tmp/tmp7su4bwmh']
+[2024-06-14T01:12:04.609+0000] {standard_task_runner.py:91} INFO - Job 113: Subtask tsk_is_file_in_s3_available
+[2024-06-14T01:12:04.643+0000] {task_command.py:426} INFO - Running <TaskInstance: zillow_analytics_dag.tsk_is_file_in_s3_available manual__2024-06-14T01:11:55.265028+00:00 [running]> on host ip-172-31-25-20.us-east-2.compute.internal
+[2024-06-14T01:12:04.719+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='myemail@domain.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='zillow_analytics_dag' AIRFLOW_CTX_TASK_ID='tsk_is_file_in_s3_available' AIRFLOW_CTX_EXECUTION_DATE='2024-06-14T01:11:55.265028+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-14T01:11:55.265028+00:00'
+[2024-06-14T01:12:04.720+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-14T01:12:04.732+0000] {baseoperator.py:399} WARNING - S3KeySensor.execute cannot be called outside TaskInstance!
+[2024-06-14T01:12:04.732+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:12:04.737+0000] {base.py:84} INFO - Using connection ID 'aws_s3_conn' for task execution.
+[2024-06-14T01:12:04.738+0000] {connection_wrapper.py:384} INFO - AWS Connection (conn_id='aws_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2024-06-14T01:12:10.129+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:12:15.138+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:12:20.146+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:12:25.156+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:12:30.164+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:12:35.172+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:12:40.182+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:12:45.190+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:12:50.201+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:12:55.209+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:00.218+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:05.228+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:10.239+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:15.247+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:20.255+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:25.264+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:30.272+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:35.281+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:40.289+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:45.300+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:50.309+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:13:55.318+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:14:00.326+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:14:05.336+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024011158.csv
+[2024-06-14T01:14:05.345+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-14T01:14:05.345+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/providers/amazon/aws/sensors/s3.py", line 183, in execute
+    super().execute(context)
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/sensors/base.py", line 281, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 120.61272798792925 seconds exceeds the specified timeout of 120.0.
+[2024-06-14T01:14:05.350+0000] {taskinstance.py:1206} INFO - Immediate failure requested. Marking task as FAILED. dag_id=zillow_analytics_dag, task_id=tsk_is_file_in_s3_available, run_id=manual__2024-06-14T01:11:55.265028+00:00, execution_date=20240614T011155, start_date=20240614T011204, end_date=20240614T011405
+[2024-06-14T01:14:05.361+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 113 for task tsk_is_file_in_s3_available (Sensor has timed out; run duration of 120.61272798792925 seconds exceeds the specified timeout of 120.0.; 151386)
+[2024-06-14T01:14:05.380+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-14T01:14:05.389+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-14T01:14:05.390+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

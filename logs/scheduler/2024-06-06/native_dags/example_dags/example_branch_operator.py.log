@@ -1,0 +1,25 @@
+[2024-06-06T01:16:30.560+0000] {processor.py:161} INFO - Started process (PID=21087) to work on /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:16:30.561+0000] {processor.py:830} INFO - Processing file /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2024-06-06T01:16:30.563+0000] {logging_mixin.py:188} INFO - [2024-06-06T01:16:30.562+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:16:30.565+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:16:30.577+0000] {processor.py:183} INFO - Processing /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py took 0.023 seconds
+[2024-06-06T01:17:35.315+0000] {processor.py:161} INFO - Started process (PID=21156) to work on /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:17:35.318+0000] {processor.py:830} INFO - Processing file /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2024-06-06T01:17:35.320+0000] {logging_mixin.py:188} INFO - [2024-06-06T01:17:35.320+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:17:35.323+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:17:35.335+0000] {processor.py:183} INFO - Processing /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py took 0.026 seconds
+[2024-06-06T01:18:40.346+0000] {processor.py:161} INFO - Started process (PID=21248) to work on /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:18:40.348+0000] {processor.py:830} INFO - Processing file /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2024-06-06T01:18:40.350+0000] {logging_mixin.py:188} INFO - [2024-06-06T01:18:40.349+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:18:40.352+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:18:40.364+0000] {processor.py:183} INFO - Processing /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py took 0.024 seconds
+[2024-06-06T01:19:43.321+0000] {processor.py:161} INFO - Started process (PID=21335) to work on /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:19:43.322+0000] {processor.py:830} INFO - Processing file /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2024-06-06T01:19:43.324+0000] {logging_mixin.py:188} INFO - [2024-06-06T01:19:43.324+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:19:43.327+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:19:43.338+0000] {processor.py:183} INFO - Processing /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py took 0.023 seconds
+[2024-06-06T01:20:45.652+0000] {processor.py:161} INFO - Started process (PID=21428) to work on /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:20:45.653+0000] {processor.py:830} INFO - Processing file /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2024-06-06T01:20:45.655+0000] {logging_mixin.py:188} INFO - [2024-06-06T01:20:45.654+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:20:45.658+0000] {processor.py:842} WARNING - No viable dags retrieved from /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py
+[2024-06-06T01:20:45.669+0000] {processor.py:183} INFO - Processing /home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_operator.py took 0.023 seconds

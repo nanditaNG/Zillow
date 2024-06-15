@@ -1,0 +1,44 @@
+[2024-06-14T02:28:18.794+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-14T02:28:18.804+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: zillow_analytics_dag.tsk_is_file_in_s3_available manual__2024-06-14T02:28:10.592210+00:00 [queued]>
+[2024-06-14T02:28:18.810+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: zillow_analytics_dag.tsk_is_file_in_s3_available manual__2024-06-14T02:28:10.592210+00:00 [queued]>
+[2024-06-14T02:28:18.810+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2024-06-14T02:28:18.824+0000] {taskinstance.py:2330} INFO - Executing <Task(S3KeySensor): tsk_is_file_in_s3_available> on 2024-06-14 02:28:10.592210+00:00
+[2024-06-14T02:28:18.828+0000] {standard_task_runner.py:63} INFO - Started process 156022 to run task
+[2024-06-14T02:28:18.831+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'zillow_analytics_dag', 'tsk_is_file_in_s3_available', 'manual__2024-06-14T02:28:10.592210+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/zillowanalytics.py', '--cfg-path', '/tmp/tmp3afppfzy']
+[2024-06-14T02:28:18.833+0000] {standard_task_runner.py:91} INFO - Job 146: Subtask tsk_is_file_in_s3_available
+[2024-06-14T02:28:18.866+0000] {task_command.py:426} INFO - Running <TaskInstance: zillow_analytics_dag.tsk_is_file_in_s3_available manual__2024-06-14T02:28:10.592210+00:00 [running]> on host ip-172-31-25-20.us-east-2.compute.internal
+[2024-06-14T02:28:18.938+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='myemail@domain.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='zillow_analytics_dag' AIRFLOW_CTX_TASK_ID='tsk_is_file_in_s3_available' AIRFLOW_CTX_EXECUTION_DATE='2024-06-14T02:28:10.592210+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-14T02:28:10.592210+00:00'
+[2024-06-14T02:28:18.938+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-14T02:28:18.951+0000] {baseoperator.py:399} WARNING - S3KeySensor.execute cannot be called outside TaskInstance!
+[2024-06-14T02:28:18.951+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/response_data_14062024022812.csv
+[2024-06-14T02:28:18.956+0000] {base.py:84} INFO - Using connection ID 'aws_s3_conn' for task execution.
+[2024-06-14T02:28:18.956+0000] {connection_wrapper.py:384} INFO - AWS Connection (conn_id='aws_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2024-06-14T02:28:24.356+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/response_data_14062024022812.csv
+[2024-06-14T02:28:29.365+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/response_data_14062024022812.csv
+[2024-06-14T02:28:34.375+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/response_data_14062024022812.csv
+[2024-06-14T02:28:39.382+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/response_data_14062024022812.csv
+[2024-06-14T02:28:39.393+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-14T02:28:39.394+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/providers/amazon/aws/sensors/s3.py", line 183, in execute
+    super().execute(context)
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/sensors/base.py", line 281, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 20.442383648012765 seconds exceeds the specified timeout of 20.0.
+[2024-06-14T02:28:39.398+0000] {taskinstance.py:1206} INFO - Immediate failure requested. Marking task as FAILED. dag_id=zillow_analytics_dag, task_id=tsk_is_file_in_s3_available, run_id=manual__2024-06-14T02:28:10.592210+00:00, execution_date=20240614T022810, start_date=20240614T022818, end_date=20240614T022839
+[2024-06-14T02:28:39.410+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 146 for task tsk_is_file_in_s3_available (Sensor has timed out; run duration of 20.442383648012765 seconds exceeds the specified timeout of 20.0.; 156022)
+[2024-06-14T02:28:39.419+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-14T02:28:39.428+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-14T02:28:39.428+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

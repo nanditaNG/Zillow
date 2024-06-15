@@ -1,0 +1,100 @@
+[2024-06-14T01:59:26.689+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-14T01:59:26.699+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: zillow_analytics_dag.tsk_is_file_in_s3_available manual__2024-06-14T01:59:17.334325+00:00 [queued]>
+[2024-06-14T01:59:26.705+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: zillow_analytics_dag.tsk_is_file_in_s3_available manual__2024-06-14T01:59:17.334325+00:00 [queued]>
+[2024-06-14T01:59:26.705+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2024-06-14T01:59:26.720+0000] {taskinstance.py:2330} INFO - Executing <Task(S3KeySensor): tsk_is_file_in_s3_available> on 2024-06-14 01:59:17.334325+00:00
+[2024-06-14T01:59:26.725+0000] {standard_task_runner.py:63} INFO - Started process 154090 to run task
+[2024-06-14T01:59:26.728+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'zillow_analytics_dag', 'tsk_is_file_in_s3_available', 'manual__2024-06-14T01:59:17.334325+00:00', '--job-id', '131', '--raw', '--subdir', 'DAGS_FOLDER/zillowanalytics.py', '--cfg-path', '/tmp/tmppa58j9dz']
+[2024-06-14T01:59:26.730+0000] {standard_task_runner.py:91} INFO - Job 131: Subtask tsk_is_file_in_s3_available
+[2024-06-14T01:59:26.764+0000] {task_command.py:426} INFO - Running <TaskInstance: zillow_analytics_dag.tsk_is_file_in_s3_available manual__2024-06-14T01:59:17.334325+00:00 [running]> on host ip-172-31-25-20.us-east-2.compute.internal
+[2024-06-14T01:59:26.840+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='myemail@domain.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='zillow_analytics_dag' AIRFLOW_CTX_TASK_ID='tsk_is_file_in_s3_available' AIRFLOW_CTX_EXECUTION_DATE='2024-06-14T01:59:17.334325+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-14T01:59:17.334325+00:00'
+[2024-06-14T01:59:26.840+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-14T01:59:26.853+0000] {baseoperator.py:399} WARNING - S3KeySensor.execute cannot be called outside TaskInstance!
+[2024-06-14T01:59:26.854+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T01:59:26.859+0000] {base.py:84} INFO - Using connection ID 'aws_s3_conn' for task execution.
+[2024-06-14T01:59:26.859+0000] {connection_wrapper.py:384} INFO - AWS Connection (conn_id='aws_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2024-06-14T01:59:32.258+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T01:59:37.269+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T01:59:42.278+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T01:59:47.286+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T01:59:52.294+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T01:59:57.305+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:02.313+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:07.322+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:12.333+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:17.342+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:22.350+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:27.358+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:32.366+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:37.375+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:42.386+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:47.398+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:52.407+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:00:57.418+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:02.426+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:07.438+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:12.449+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:17.460+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:22.468+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:27.476+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:32.485+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:37.495+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:42.503+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:47.513+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:52.522+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:01:57.533+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:02.544+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:07.556+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:12.567+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:17.576+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:22.587+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:27.598+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:32.609+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:37.617+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:42.625+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:47.637+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:52.648+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:02:57.656+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:02.667+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:07.675+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:12.685+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:17.694+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:22.705+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:27.778+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:32.789+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:37.799+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:42.810+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:47.821+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:52.832+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:03:57.846+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:04:02.857+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:04:07.867+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:04:12.878+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:04:17.893+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:04:22.905+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:04:27.921+0000] {s3.py:117} INFO - Poking for key : s3://cleaned-data-zone-csv-bucket-ng/reponse_data_14062024015920.csv
+[2024-06-14T02:04:27.932+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-14T02:04:27.932+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/providers/amazon/aws/sensors/s3.py", line 183, in execute
+    super().execute(context)
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/endtoend_venv/lib/python3.12/site-packages/airflow/sensors/base.py", line 281, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 301.07816546503454 seconds exceeds the specified timeout of 300.0.
+[2024-06-14T02:04:27.936+0000] {taskinstance.py:1206} INFO - Immediate failure requested. Marking task as FAILED. dag_id=zillow_analytics_dag, task_id=tsk_is_file_in_s3_available, run_id=manual__2024-06-14T01:59:17.334325+00:00, execution_date=20240614T015917, start_date=20240614T015926, end_date=20240614T020427
+[2024-06-14T02:04:27.948+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 131 for task tsk_is_file_in_s3_available (Sensor has timed out; run duration of 301.07816546503454 seconds exceeds the specified timeout of 300.0.; 154090)
+[2024-06-14T02:04:27.968+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-14T02:04:27.977+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-14T02:04:27.978+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
