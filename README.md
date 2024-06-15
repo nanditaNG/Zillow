@@ -1,6 +1,7 @@
 Zillow Data Analytics Project | End-To-End Python ETL Pipeline 
 
 Overview
+
 In this project, I focused on building and automating a Python ETL process. 
 The process involves extracting real estate properties data from the Zillow Rapid API and loading it into an Amazon S3 bucket. 
 This action triggers a series of AWS Lambda functions, which transform the data, convert it into CSV format, and load the resulting file into another S3 bucket using Apache Airflow. 
